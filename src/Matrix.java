@@ -1,14 +1,14 @@
 import java.util.Arrays;
 import java.util.Objects;
 
-public class IMatrixPojo {
+public class Matrix {
 
     private final double[][] matrix;
     private final int numberOfRows;
     private final int numberOfColumns;
 
 
-    public IMatrixPojo(double[][] matrix, int numberOfRows, int numberOfColumns) {
+    public Matrix(double[][] matrix, int numberOfRows, int numberOfColumns) {
         this.matrix = matrix;
         this.numberOfRows = numberOfRows;
         this.numberOfColumns = numberOfColumns;
@@ -25,8 +25,8 @@ public class IMatrixPojo {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof IMatrixPojo)) return false;
-        IMatrixPojo that = (IMatrixPojo) o;
+        if (!(o instanceof Matrix)) return false;
+        Matrix that = (Matrix) o;
         return getNumberOfRows() == that.getNumberOfRows() &&
                 getNumberOfColumns() == that.getNumberOfColumns() &&
                 Arrays.equals(getMatrix(), that.getMatrix());
